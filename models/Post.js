@@ -11,21 +11,18 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    postTitle: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    postBody: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
