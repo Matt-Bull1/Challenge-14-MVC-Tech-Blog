@@ -1,21 +1,36 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
-
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
+<div id="title-card" class="card text-center m-4 shadow rounded">
+  <div class="page-card">
+    The Tech Blog
   </div>
 </div>
 
+<div class="container-fluid py-2">
+  <div id="post-card" class="card m-4 border-4">
+
+    <div id="post-title" class="post-title px-3">
+      Login
+    </div>
+
+    <div class="card-body">
+
+      <form class="form login-form">
+        <div class="form-group">
+          <label for="username-login">Username</label>
+          <input type="text" class="form-control" id="username-login" placeholder="Enter username">
+        </div>
+        </br>
+        <div class="form-group">
+          <label for="password-login">Password</label>
+          <input type="password" class="form-control" id="password-login" placeholder="Enter password">
+        </div>
+        </br>
+        <button type="submit" class="btn btn-lg">Login</button>
+        </br></br>
+        <a href="/signup"class="signup">Sign Up</a>
+      </form>
+
+    </div>
+
+  </div>
+</div>
 <script src="./js/login.js"></script>
