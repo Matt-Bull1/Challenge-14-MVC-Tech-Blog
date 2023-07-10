@@ -27,3 +27,38 @@ nav ul li a {
 a {
   text-decoration: none;
 }
+
+#title-card {
+  font-size: 2rem;
+  width: 16rem;
+  background-color: var(--mint);
+  font-weight: bold;
+}
+.page-card {
+  flex: 1 1 auto;
+  color: var(--brown);
+}
+
+.container-fluid {
+  background-color: var(--mint);
+  color: var(--brown);
+}
+#post-card {
+  font-size: 1rem;
+  background-color: var(--mint);
+  color: var(--brown);
+}
+
+#post-title {
+  font-size: 2rem;
+  background-color: var(--brown);
+  color: var(--mint);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span {
+  font-size: 1.5rem;
+}
