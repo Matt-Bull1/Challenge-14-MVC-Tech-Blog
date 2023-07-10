@@ -2,13 +2,11 @@
   {
     "id": 1,
     "username": "Xandromus",
-    "email": "Xandromus@gmail.com",
     "password": "pass1234"
   },
   {
     "id": 2,
     "username": "Lernantino",
-    "email": "Lernantino@gmail.com",
     "password": "password1234"
   }
 ]
