@@ -1,5 +1,5 @@
-<div id="title-card" class="card text-center m-4 shadow rounded">
-  <div class="page-card">
+<div id="page-card" class="card text-center m-4 shadow rounded">
+  <div class="card-body">
     The Tech Blog
   </div>
 </div>
@@ -7,21 +7,21 @@
 <div class="container-fluid mint-container py-2">
   <div id="post-card" class="card m-4 border-4">
 
-    <div id="post-title" class="card-title px-3">
+    <div id="post-card-title" class="card-title px-3">
       Update Post
     </div>
 
-    <div class="post-body">
+    <div class="card-body">
 
       <form class="form update-post-form">
         <div class="form-group">
           <label for="post-title">Title</label>
-          <textarea type="text" class="form-control" rows="1" id="post-title">{{postTitle}}</textarea>
+          <textarea type="text" class="form-control" rows="1" id="post-title">{{title}}</textarea>
         </div>
         </br>
         <div class="form-group">
           <label for="post-content">Content</label>
-          <textarea type="text" class="form-control" rows="5" id="post-content">{{postBody}}</textarea>
+          <textarea type="text" class="form-control" rows="5" id="post-content">{{content}}</textarea>
         </div>
         </br></br>
         <button type="button" class="btn update-btn btn-lg">Update</button>

@@ -9,17 +9,17 @@
 <div class="container-fluid mint-container py-2">
   <!-- Loop over each object in the posts array -->
   {{#each posts as |post| }}
+  <a href="/comments/{{post.id}}">
   <div id= "post-card" class="card m-4 border-4">
-        <a href="/comments/{{post.id}}"></a>
+        
       <div id="post-card-title" class="card-title px-3">
-        {{post.postTitle}}
+        {{post.title}}
         <span>Posted by {{user.username}} on {{format_date post.date_created}}</span>
       </div>
     <div class="card-body">
-      <p>
-        {{post.postBody}}
-      </p>
+        {{post.content}}
     </div>
   </div>
+  </a>
   {{/each}}
 </div>  
