@@ -1,0 +1,37 @@
+<div id="page-card" class="card text-center m-4 shadow rounded">
+  <div class="card-body">
+    The Tech Blog
+  </div>
+</div>
+
+<div class="container-fluid mint-container py-2">
+  <div id="post-card" class="card m-4 border-4">
+
+    <div id="post-card-title" class="card-title px-3">
+      Create New Post
+    </div>
+
+    <div class="card-body">
+
+      <form class="form post-form">
+        <div class="form-group">
+          <label for="post-title">Title</label>
+          <input type="text" class="form-control" id="post-title" placeholder="Enter post title">
+        </div>
+        </br>
+        <div class="form-group">
+          <label for="post-content">Content</label>
+          <textarea type="text" class="form-control" rows="5" id="post-content" placeholder="Enter post content"></textarea>
+        </div>
+        </br></br>
+        <button type="submit" class="btn btn btn-lg">Create</button>
+        <a href="/dashboard" type="button" class="btn create-btn btn-lg">Cancel</a>
+        </br>
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="/js/new-post.js"></script>
