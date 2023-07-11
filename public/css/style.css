@@ -78,6 +78,12 @@ a {
   display: flex;
 }
 
+#comment-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 span {
   font-size: 1rem;
 }

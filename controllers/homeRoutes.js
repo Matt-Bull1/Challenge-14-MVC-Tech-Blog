@@ -114,4 +114,36 @@ router.get('/update-post/:id', async (req, res) => {
   }
 });
 
+router.get('/comments/:id', async (req, res) => {
+  try {
+      const postData = await Post.findByPk(req.params.id, {
+          include: [
+              {
+                  model: User,
+                  attributes: ['username'],
+              },
+              {
+                  model: Comment,
+                  include: [
+                      {
+                          model: User,
+                          attributes: ['username'],
+                      },
+                  ],
+              },
+          ],
+      });
+
+      const post = postData.get({ plain: true });
+
+      res.render("comments", {
+          ...post,
+      });
+  } catch (err) {
+      res.status(500).json(err);
+      console.log(err);
+  }
+})
+
+
 module.exports = router;
