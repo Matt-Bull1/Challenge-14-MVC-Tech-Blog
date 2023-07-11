@@ -4,42 +4,22 @@
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Post:</h3>
+<div class="container-fluid justify-content-center py-2">
+  <a href="/create-post" type="button" class="post-btn p-2 m-2 btn-lg btn">New Post</a>
 
-    <form class="form new-post-form">
-      <div class="form-group">
-        <label for="post-title">Post Title:</label>
-        <input class="form-input" type="text" id="post-title" name="post-title" />
-      </div>
-      <div class="form-group">
-        <label for="post-body">Post Body:</label>
-        <textarea class="form-input" id="post-body" name="post-body"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
+    {{#if posts.length}}
+          {{#each posts as |post|}}
+            <a href="/update-post/{{post.id}}">
+              <div id="dashboard-card" class="card m-4 border-4">
+                <div id="dashboard-title" class="dashboard-title px-3">
+                  {{post.postTitle}}
+                  <span>{{format_date post.date_created}}</span>
+                </div>
+              </div>
+            </a>
+          {{/each}}
+    {{/if}}
 
-  {{#if posts.length}}
-  <div class="col-md-6 post-list">
-    <h3>Current Posts:</h3>
-
-    {{#each posts as |post|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-    <script src="./js/delete.js"></script>
-  </div>
-  {{/if}}
 </div>
 
 <script src="/js/profile.js"></script>

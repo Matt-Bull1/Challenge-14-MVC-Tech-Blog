@@ -52,6 +52,23 @@ a {
   justify-content: space-between;
 }
 
+#dashboard-card {
+  font-size: 2rem;
+  background-color: var(--mint);
+  color: var(--brown);
+  font-weight: bold;
+  display: flex;
+}
+#dashboard-title {
+  font-size: 2rem;
+  background-color: var(--mint);
+  color: var(--brown);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 span {
   font-size: 1rem;
 }
@@ -60,6 +77,12 @@ span {
     background-color: var(--brown);
     color: var(--mint);
     font-size: 1.3rem;
+}
+.post-btn {
+  background-color: var(--mint);
+  color: var(--brown);
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .signup,
