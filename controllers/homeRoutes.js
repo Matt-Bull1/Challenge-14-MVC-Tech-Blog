@@ -40,7 +40,7 @@ router.get('/login', async (req, res) => {
   }
 })
 
-router.get('/sign-up', async (req, res) => {
+router.get('/signup', async (req, res) => {
   try {
       if (req.session.logged_in) {
           res.redirect('/dashboard');
