@@ -1,0 +1,47 @@
+<div id="page-card" class="card text-center m-4 shadow rounded">
+  <div class="card-body">
+    The Tech Blog
+  </div>
+</div>
+
+
+<div class="container-fluid mint-container py-2">
+    
+  <div id="post-card" class="card m-4 border-4">
+
+    <div id="pc-title" class="card-title px-3">
+        {{title}} 
+        <span>Posted by {{user.username}} on {{format_date date_created}}</span>
+    </div>
+
+    <div class="card-body">
+        {{content}}
+    </div>
+
+  </div>
+
+  <div id="post-card" class="card m-4 border-4">
+
+    <div id="pc-title" class="card-title px-3">
+    Create Comment
+    </div>
+
+    <div class="card-body">
+
+      <form class="form comment-form">
+        <div class="form-group">
+          <textarea type="text" class="form-control" rows="5" id="post-comment" placeholder="Enter comment"></textarea>
+        </div>
+        </br>
+        <button type="submit" class="btn login-btn btn-lg">Create</button>
+        <a href="/comments/{{id}}" type="button" class="btn create-btn btn-lg">Cancel</a>
+        </br>
+      </form>
+
+    </div>
+
+  </div>
+   
+</div>
+
+<script src="/js/comment.js"></script>

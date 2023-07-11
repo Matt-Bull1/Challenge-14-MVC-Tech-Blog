@@ -138,8 +138,32 @@ router.get('/comments/:id', async (req, res) => {
 
       res.render("comments", {
           ...post,
+          logged_in: req.session.logged_in
       });
   } catch (err) {
+      res.status(500).json(err);
+      console.log(err);
+  }
+})
+
+router.get('/add-comment/:id', withAuth, async (req, res) => {
+  try {
+      const postData = await Post.findByPk(req.params.id, {
+          include: [
+              {
+                  model: User,
+                  attributes: ['id', 'username'],
+              },
+          ],
+      });
+
+      const post = postData.get({ plain: true });
+
+      res.render("add-comment", {
+          ...post,
+          logged_in: req.session.logged_in,
+      });
+  } catch (err){
       res.status(500).json(err);
       console.log(err);
   }
