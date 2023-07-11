@@ -1,23 +1,21 @@
-<div id="title-card" class="card text-center m-4 shadow rounded">
-  <div class="page-card">
+<div id="page-card" class="card text-center m-4 shadow rounded">
+  <div class="card-body">
     The Tech Blog
   </div>
 </div>
 
 
 
-<div class="container-fluid justify-content-center  py-2">
+<div class="container-fluid mint-container py-2">
   <!-- Loop over each object in the posts array -->
   {{#each posts as |post| }}
   <div id= "post-card" class="card m-4 border-4">
-    <div class="col-md-5">
         <a href="/comments/{{post.id}}"></a>
-      <div id="post-title" class="post-title px-3">
+      <div id="post-card-title" class="card-title px-3">
         {{post.postTitle}}
         <span>Posted by {{user.username}} on {{format_date post.date_created}}</span>
       </div>
-    </div>
-    <div class="post-body">
+    <div class="card-body">
       <p>
         {{post.postBody}}
       </p>

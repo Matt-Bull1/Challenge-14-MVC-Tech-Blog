@@ -1,0 +1,38 @@
+<div id="title-card" class="card text-center m-4 shadow rounded">
+  <div class="page-card">
+    The Tech Blog
+  </div>
+</div>
+
+<div class="container-fluid mint-container py-2">
+  <div id="post-card" class="card m-4 border-4">
+
+    <div id="post-title" class="card-title px-3">
+      Update Post
+    </div>
+
+    <div class="post-body">
+
+      <form class="form update-post-form">
+        <div class="form-group">
+          <label for="post-title">Title</label>
+          <textarea type="text" class="form-control" rows="1" id="post-title">{{postTitle}}</textarea>
+        </div>
+        </br>
+        <div class="form-group">
+          <label for="post-content">Content</label>
+          <textarea type="text" class="form-control" rows="5" id="post-content">{{postBody}}</textarea>
+        </div>
+        </br></br>
+        <button type="button" class="btn update-btn btn-lg">Update</button>
+        <button type="button" class="btn delete-btn btn-lg">Delete</button>
+        <a href="/dashboard" type="button" class="btn btn-lg">Cancel</a>
+        </br>
+      </form>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="/js/update.js"></script>

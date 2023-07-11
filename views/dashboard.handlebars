@@ -1,17 +1,17 @@
-<div id="title-card" class="card text-center m-4 shadow rounded">
-  <div class="page-body">
+<div id="page-card" class="card text-center m-4 shadow rounded">
+  <div class="card-body">
     Your Dashboard
   </div>
 </div>
 
-<div class="container-fluid justify-content-center py-2">
+<div class="container-fluid mint-container justify-content-center py-2">
   <a href="/create-post" type="button" class="post-btn p-2 m-2 btn-lg btn">New Post</a>
 
     {{#if posts.length}}
           {{#each posts as |post|}}
             <a href="/update-post/{{post.id}}">
               <div id="dashboard-card" class="card m-4 border-4">
-                <div id="dashboard-title" class="dashboard-title px-3">
+                <div id="dashboard-title" class="card-title px-3">
                   {{post.postTitle}}
                   <span>{{format_date post.date_created}}</span>
                 </div>
